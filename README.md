@@ -2,7 +2,11 @@
 
 https://graphics.rwth-aachen.de/media/papers/308/probabilistic-quadrics.pdf
 
+http://www.cs.cmu.edu/~garland/Papers/quadrics.pdf
+
 By Clifton Sahota - 1005179860
+
+Core Files: main.cpp, qef.h, qef_probabalistic.h, double_min_heap.h, qef.cpp, qef_probabalistic.cpp, double_min_heap.cpp
 
 Overview:
 
@@ -64,7 +68,10 @@ Input cube:
 
 Output cube:
 
-The planar probablistic quadric is implemented in 
+The planar probablistic quadric is implemented in qef_probabalistic.cpp. It is similar to the classical planar quadric, with the core difference being
+in that is has an added sigma_n value. I selected this value to be of the principal axis of the normal on the planes. It appears to have a smaller effect
+then in the examples provided in the paper, however nonetheless has a notable impact. The change in calculation of the Q matrix, cost and cost minimizing
+position for the contraction are the main differences from the original paper.
 
 Examples:
 Input Sphere:
