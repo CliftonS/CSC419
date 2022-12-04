@@ -58,17 +58,23 @@ Examples:
 
 Input pelvis (./prob 0 ../data/pelvis.obj):
 
+![](og_pelvis.png)
+
 Output pelvis (./prob 0.20 ../data/pelvis.obj):
 
 ![](pelvis_after.png)
 
 Input cactus (./prob 0 ../data/cactus.obj):
 
+![](og_cactus.png)
+
 Output cactus (./prob 0.40 ../data/cactus.obj):
 
 ![](cactus_after.png)
 
 Input cube (./prob 0):
+
+![](og_cube.png)
 
 Output cube (./prob):
 
@@ -85,9 +91,13 @@ Input Pelvis is same as above
 
 Output Pelvis (./prob 0.40 ../data/cactus.obj 0.5):
 
+![](prob_pelvis.png)
+
 Input cactus is same as above
 
 Output cactus (./prob 0.40 ../data/cactus.obj):
+
+![](prob_cactus.png)
 
 Instructions (setup):
 1. Extract folder somewhere (which you have already done due to reading this)
