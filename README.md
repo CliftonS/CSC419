@@ -56,17 +56,17 @@ on flat areas to contract vertices in.
 
 Examples:
 
-Input pelvis:
+Input pelvis (./prob 0 ../data/pelvis.obj):
 
-Output pelvis:
+Output pelvis (./prob 0.20 ../data/pelvis.obj):
 
-Input cactus:
+Input cactus (./prob 0 ../data/cactus.obj):
 
-Output cactus:
+Output cactus (./prob 0.40 ../data/cactus.obj):
 
-Input cube:
+Input cube (./prob 0):
 
-Output cube:
+Output cube (./prob):
 
 The planar probablistic quadric is implemented in qef_probabalistic.cpp. It is similar to the classical planar quadric, with the core difference being
 in that is has an added sigma_n value. I selected this value to be of the principal axis of the normal on the planes. It appears to have a smaller effect
@@ -90,10 +90,18 @@ Instructions (setup):
 5. cmake ..
 6. make
 
+For step 5 may optionally use [cmake -DCMAKE_BUILD_TYPE=Release ../] for substantially faster run times, helpful especially for large numbers or removed vertices or for large data files.
+
+Optimizations that could be used if expanded upon in qef and qef_probabalistic would consist of adding a map to the double min heap so that references can be found without iterating through the array for a particular one. Additionally keeping track of which faces a given vertex are a corner of would also increase the running speed. In general based on the optimization sections of the original papers, these implementation become slow very quickly with larger objects.
+
+Use pelvis.obj or torus.obj for faster run times as they are much smaller objects.
+
 Instructions (Running options):
 1. Perform qef.cpp on a 8 vertex cube: ./prob
-2. Perform qef.cpp on an obj file (there are a few in the data folder): ./prob ../data/cactus.obj
-3. Perform qef_probabalistic on an obj file with given s_percent value (5%): ./prob ../data/cactus.obj 0.05
+2. Perform qef.cpp on an obj file removing 20% of vertices: ./prob 0.20 ../data/cactus.obj
+3. Perform qef_probabalistic on an obj file with given s_percent value (5%) removing 20% vertices: ./prob 0.20 ../data/cactus.obj 0.05
+
+I reccomend limiting to less than 0.40 (40%) removed vertices for larger files, as it take a lot longer to run, due to needing to discard changes which would invert faces otherwise.
 
 s_percent value is read as a double, so inputing 5 will have very different results from inputting 0.05.
 
