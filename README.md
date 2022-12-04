@@ -60,13 +60,19 @@ Input pelvis (./prob 0 ../data/pelvis.obj):
 
 Output pelvis (./prob 0.20 ../data/pelvis.obj):
 
+![](pelvis_after.png)
+
 Input cactus (./prob 0 ../data/cactus.obj):
 
 Output cactus (./prob 0.40 ../data/cactus.obj):
 
+![](cactus_after.png)
+
 Input cube (./prob 0):
 
 Output cube (./prob):
+
+![](cube_after.png)
 
 The planar probablistic quadric is implemented in qef_probabalistic.cpp. It is similar to the classical planar quadric, with the core difference being
 in that is has an added sigma_n value. I selected this value to be of the principal axis of the normal on the planes. It appears to have a smaller effect
