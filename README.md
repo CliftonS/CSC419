@@ -80,13 +80,14 @@ then in the examples provided in the paper, however nonetheless has a notable im
 position for the contraction are the main differences from the original paper.
 
 Examples:
-Input Sphere:
 
-Output Sphere:
+Input Pelvis is same as above
 
-Input Pelvis:
+Output Pelvis (./prob 0.40 ../data/cactus.obj 0.5):
 
-Output Pelvis:
+Input cactus is same as above
+
+Output cactus (./prob 0.40 ../data/cactus.obj):
 
 Instructions (setup):
 1. Extract folder somewhere (which you have already done due to reading this)
